@@ -3,7 +3,8 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
-import Loader from "@/components/ui/Loader";
+
+import NextTopLoader from "nextjs-toploader";
 
 const roboto = Roboto({
   weight: "400",
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <Loader/>
+        <NextTopLoader color="#0d9488"  />
         <Header />
         <div className="min-h-screen">{children}</div>
         <Footer />
